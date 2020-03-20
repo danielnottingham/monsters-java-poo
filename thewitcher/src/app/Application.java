@@ -13,26 +13,26 @@ public class Application {
 		
 		Random random = new Random();
 		
-		ArrayList<MonsterClassEnum> enums = new ArrayList<MonsterClassEnum>();
-		enums.add(MonsterClassEnum.Djinn); enums.add(MonsterClassEnum.Gargula); enums.add(MonsterClassEnum.Golem);
-		enums.add(MonsterClassEnum.Ghouls); enums.add(MonsterClassEnum.Necroso); enums.add(MonsterClassEnum.Nevoloso);
-		enums.add(MonsterClassEnum.Kikimora); enums.add(MonsterClassEnum.Arachno); enums.add(MonsterClassEnum.Harrisi);
-		enums.add(MonsterClassEnum.Silvano); enums.add(MonsterClassEnum.Kernun); enums.add(MonsterClassEnum.Dopplers);
+		ArrayList<MonsterClassEnum> enumClass = new ArrayList<MonsterClassEnum>();
+		enumClass.add(MonsterClassEnum.Djinn); enumClass.add(MonsterClassEnum.Gargula); enumClass.add(MonsterClassEnum.Golem);
+		enumClass.add(MonsterClassEnum.Ghouls); enumClass.add(MonsterClassEnum.Necroso); enumClass.add(MonsterClassEnum.Nevoloso);
+		enumClass.add(MonsterClassEnum.Kikimora); enumClass.add(MonsterClassEnum.Arachno); enumClass.add(MonsterClassEnum.Harrisi);
+		enumClass.add(MonsterClassEnum.Silvano); enumClass.add(MonsterClassEnum.Kernun); enumClass.add(MonsterClassEnum.Dopplers);
 		
 		
-		ArrayList<MonsterFamilyEnum> enumFactory = new ArrayList<MonsterFamilyEnum>();
-		enumFactory.add(MonsterFamilyEnum.Necrofago);
-		enumFactory.add(MonsterFamilyEnum.Construtor);
-		enumFactory.add(MonsterFamilyEnum.Insectoide);
-		enumFactory.add(MonsterFamilyEnum.Relicto);
+		ArrayList<MonsterFamilyEnum> enumFamily = new ArrayList<MonsterFamilyEnum>();
+		enumFamily.add(MonsterFamilyEnum.Necrofago);
+		enumFamily.add(MonsterFamilyEnum.Construtor);
+		enumFamily.add(MonsterFamilyEnum.Insectoide);
+		enumFamily.add(MonsterFamilyEnum.Relicto);
 		
 		
-		MonsterFamilyEnum aleatoryFactory = enumFactory.get(random.nextInt(4)); 
-		MonsterClassEnum aleatoryClass = enums.get(random.nextInt(12)); 
+		MonsterFamilyEnum aleatoryFamily = enumFamily.get(random.nextInt(4)); 
+		MonsterClassEnum aleatoryClass = enumClass.get(random.nextInt(12)); 
 		
 		
 		System.out.println(aleatoryClass);
-		System.out.println(aleatoryFactory);
+		System.out.println(aleatoryFamily);
 		
 	}
 
