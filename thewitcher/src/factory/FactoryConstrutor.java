@@ -1,6 +1,9 @@
 package factory;
 
 import criature.*;
+import family.construtor.Djinn;
+import family.construtor.Gargula;
+import family.construtor.Golem;
 
 public class FactoryConstrutor extends MonsterFamilyFactory{
 public static Criature getNecrofago(MonsterClassEnum tipo) {

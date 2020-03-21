@@ -1,0 +1,19 @@
+package family.insectoide;
+
+import java.util.ArrayList;
+
+import criature.Criature;
+import factory.MonsterClassEnum;
+
+public class Insectoide extends Criature{
+
+	public static ArrayList<MonsterClassEnum> getClasses(){
+		ArrayList<MonsterClassEnum> enumClasses = new ArrayList<MonsterClassEnum>();
+		enumClasses.add(MonsterClassEnum.Kikimora);
+		enumClasses.add(MonsterClassEnum.Arachno);
+		enumClasses.add(MonsterClassEnum.Harrisi);
+		
+		return enumClasses;
+	}
+
+}

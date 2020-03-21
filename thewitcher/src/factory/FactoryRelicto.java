@@ -1,6 +1,9 @@
 package factory;
 
 import criature.*;
+import family.relicto.Dopplers;
+import family.relicto.Kernun;
+import family.relicto.Silvano;
 
 public class FactoryRelicto extends MonsterFamilyFactory{
 	public static Criature getNecrofago(MonsterClassEnum tipo) {

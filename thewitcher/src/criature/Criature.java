@@ -6,6 +6,10 @@ public abstract class Criature {
 	private int ataque;
 	private int energia;
 	private String terreno;
+	
+	public Criature( ) {
+		
+	}
 
 	public Criature (String classe, int defesa, int ataque, int energia, String terreno) {
 		this.classe = classe;
