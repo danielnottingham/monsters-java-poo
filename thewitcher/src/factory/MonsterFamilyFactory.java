@@ -18,10 +18,8 @@ public abstract class MonsterFamilyFactory {
 		return null;
 	}
 	
-	public Criature getCriature(MonsterClassEnum tipo) {
-		
-		return null;
-	}
+	public abstract Criature getCriature(MonsterClassEnum tipo);
 	
+	public abstract Criature getRandomCriature();
 	
 }

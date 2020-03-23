@@ -1,5 +1,8 @@
 package factory;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 import criature.*;
 import family.construtor.Djinn;
 import family.construtor.Gargula;
@@ -21,6 +24,23 @@ public class FactoryConstrutor extends MonsterFamilyFactory {
 		}
 
 		return null;
+	}
+	
+	public ArrayList<MonsterClassEnum> getClasses(){
+		ArrayList<MonsterClassEnum> enumClasses = new ArrayList<MonsterClassEnum>();
+		enumClasses.add(MonsterClassEnum.Djinn);
+		enumClasses.add(MonsterClassEnum.Golem);
+		enumClasses.add(MonsterClassEnum.Gargula);
+		
+		return enumClasses;
+	}
+
+	@Override
+	public Criature getRandomCriature() {
+		Random random = new Random();
+		ArrayList<MonsterClassEnum> familyList = getClasses();
+		MonsterClassEnum monsterClassEnum = familyList.get(random.nextInt(familyList.size()));
+		return getCriature(monsterClassEnum);
 	}
 
 }

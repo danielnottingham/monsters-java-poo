@@ -1,5 +1,8 @@
 package factory;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 import criature.*;
 import family.relicto.Dopplers;
 import family.relicto.Kernun;
@@ -21,6 +24,23 @@ public class FactoryRelicto extends MonsterFamilyFactory{
 		}
 		
 		return null;
+	}
+
+	public ArrayList<MonsterClassEnum> getClasses(){
+		ArrayList<MonsterClassEnum> enumClasses = new ArrayList<MonsterClassEnum>();
+		enumClasses.add(MonsterClassEnum.Kernun);
+		enumClasses.add(MonsterClassEnum.Dopplers);
+		enumClasses.add(MonsterClassEnum.Silvano);
+		
+		return enumClasses;
+	}
+
+	@Override
+	public Criature getRandomCriature() {
+		Random random = new Random();
+		ArrayList<MonsterClassEnum> familyList = getClasses();
+		MonsterClassEnum monsterClassEnum = familyList.get(random.nextInt(familyList.size()));
+		return getCriature(monsterClassEnum);
 	}
 
 

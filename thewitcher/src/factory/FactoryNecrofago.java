@@ -1,5 +1,8 @@
 package factory;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 import criature.*;
 import family.necrofago.Ghouls;
 import family.necrofago.Necroso;
@@ -20,6 +23,23 @@ public class FactoryNecrofago extends MonsterFamilyFactory{
 		}
 		
 		return null;
+	}
+
+	public ArrayList<MonsterClassEnum> getClasses(){
+		ArrayList<MonsterClassEnum> enumClasses = new ArrayList<MonsterClassEnum>();
+		enumClasses.add(MonsterClassEnum.Ghouls);
+		enumClasses.add(MonsterClassEnum.Necroso);
+		enumClasses.add(MonsterClassEnum.Nevoloso);
+		
+		return enumClasses;
+	}
+
+	@Override
+	public Criature getRandomCriature() {
+		Random random = new Random();
+		ArrayList<MonsterClassEnum> familyList = getClasses();
+		MonsterClassEnum monsterClassEnum = familyList.get(random.nextInt(familyList.size()));
+		return getCriature(monsterClassEnum);
 	}
 
 }

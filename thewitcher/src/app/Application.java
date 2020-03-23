@@ -34,10 +34,8 @@ public class Application {
 		MonsterClassEnum aleatoryClass = enumClass.get(random.nextInt(12));
 		
 		MonsterFamilyFactory familia = MonsterFamilyFactory.getFactory(aleatoryFamily);
-		System.out.println(familia.getCriature(aleatoryClass));
+		System.out.println(familia.getRandomCriature());
 		
-		
-
 	}
 
 }
