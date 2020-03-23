@@ -1,5 +1,7 @@
 package factory;
 
+import criature.Criature;
+
 public abstract class MonsterFamilyFactory {
 
 	public static MonsterFamilyFactory getFactory(MonsterFamilyEnum tipo) {
@@ -15,5 +17,11 @@ public abstract class MonsterFamilyFactory {
 		}
 		return null;
 	}
+	
+	public Criature getCriature(MonsterClassEnum tipo) {
+		
+		return null;
+	}
+	
 	
 }

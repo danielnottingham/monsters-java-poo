@@ -4,6 +4,7 @@ import java.util.Random;
 
 import factory.MonsterClassEnum;
 import factory.MonsterFamilyEnum;
+import factory.MonsterFamilyFactory;
 import family.construtor.Construtor;
 import family.insectoide.Insectoide;
 import family.necrofago.Necrofago;
@@ -31,9 +32,11 @@ public class Application {
 
 		MonsterFamilyEnum aleatoryFamily = enumFamily.get(random.nextInt(4));
 		MonsterClassEnum aleatoryClass = enumClass.get(random.nextInt(12));
-
-		System.out.println(aleatoryClass);
-		System.out.println(aleatoryFamily);
+		
+		MonsterFamilyFactory familia = MonsterFamilyFactory.getFactory(aleatoryFamily);
+		System.out.println(familia.getCriature(aleatoryClass));
+		
+		
 
 	}
 
