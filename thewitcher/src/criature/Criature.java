@@ -1,11 +1,11 @@
 package criature;
 
 public abstract class Criature {
-	private String classe;
-	private int defesa;
-	private int ataque;
-	private int energia;
-	private String terreno;
+	protected String classe;
+	protected int defesa;
+	protected int ataque;
+	protected int energia;
+	protected String terreno;
 	
 	public Criature( ) {
 		
@@ -39,12 +39,4 @@ public abstract class Criature {
 		return terreno;
 	}
 	
-	public String infoMonster() {
-		String aux = "Classe: " + classe + ", " + 
-				"Defesa: " + defesa + ", " + 
-				"Ataque: " + ataque + ", " + 
-				"Energia: " + energia + ", " + 
-				"Terreno: " + terreno;
-		return aux;
-	}
 }

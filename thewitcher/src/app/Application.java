@@ -2,6 +2,7 @@ package app;
 
 import java.util.Random;
 
+import criature.Criature;
 import factory.MonsterClassEnum;
 import factory.MonsterFamilyEnum;
 import factory.MonsterFamilyFactory;
@@ -29,12 +30,14 @@ public class Application {
 		enumFamily.add(MonsterFamilyEnum.Construtor);
 		enumFamily.add(MonsterFamilyEnum.Insectoide);
 		enumFamily.add(MonsterFamilyEnum.Relicto);
-
-		MonsterFamilyEnum aleatoryFamily = enumFamily.get(random.nextInt(4));
-		MonsterClassEnum aleatoryClass = enumClass.get(random.nextInt(12));
 		
-		MonsterFamilyFactory familia = MonsterFamilyFactory.getFactory(aleatoryFamily);
-		System.out.println(familia.getRandomCriature());
+		for(int i=1; i<=25 ; i++) {
+			MonsterFamilyEnum aleatoryFamily = enumFamily.get(random.nextInt(4));
+			MonsterFamilyFactory family = MonsterFamilyFactory.getFactory(aleatoryFamily);
+			Criature criatura = family.getRandomCriature();
+			System.out.println(i + ". " + criatura);
+			
+		} 
 		
 	}
 

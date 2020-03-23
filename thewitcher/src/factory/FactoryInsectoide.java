@@ -14,11 +14,11 @@ public class FactoryInsectoide extends MonsterFamilyFactory{
 	public Criature getCriature(MonsterClassEnum tipo) {
 		switch (tipo) {
 		case Kikimora:
-			return new Kikimora("Kikimora / Gênio Construtor", 8, 9, 10, "Não possui um terreno.");
+			return new Kikimora("Kikimora / Insectoide", 8, 9, 10, "Não possui um terreno.");
 		case Harrisi:
-			return new Harrisi("Harrisi / Construtor", 5, 3, 2, "Pântano");
+			return new Harrisi("Harrisi / Insectoide", 5, 3, 2, "Pântano");
 		case Arachno:
-			return new Arachno("Arachno / Construtor", 3, 6, 1, "Montanhas");
+			return new Arachno("Arachno / Insectoide", 3, 6, 1, "Montanhas");
 		default:
 			break;	
 		}
