@@ -20,25 +20,6 @@ public abstract class Criature {
 		this.terreno = terreno;
 	}
 
-	public String getClasse() {
-		return classe;
-	}
-
-	public int getDefesa() {
-		return defesa;
-	}
-
-	public int getAtaque() {
-		return ataque;
-	}
-
-	public int getEnergia() {
-		return energia;
-	}
-
-	public String getTerreno() {
-		return terreno;
-	}
 	
 	@Override
 	public String toString() {
