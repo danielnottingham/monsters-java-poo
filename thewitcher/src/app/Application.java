@@ -18,13 +18,6 @@ public class Application {
 
 		Random random = new Random();
 
-		ArrayList<MonsterClassEnum> enumClass = new ArrayList<MonsterClassEnum>();
-		
-		enumClass.addAll(Construtor.getClasses());
-		enumClass.addAll(Insectoide.getClasses());
-		enumClass.addAll(Relicto.getClasses());
-		enumClass.addAll(Necrofago.getClasses());
-
 		ArrayList<MonsterFamilyEnum> enumFamily = new ArrayList<MonsterFamilyEnum>();
 		enumFamily.add(MonsterFamilyEnum.Necrofago);
 		enumFamily.add(MonsterFamilyEnum.Construtor);

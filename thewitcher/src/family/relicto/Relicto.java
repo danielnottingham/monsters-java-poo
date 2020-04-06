@@ -19,14 +19,4 @@ public class Relicto extends Criature{
 		return enumClasses;
 	}
 
-	@Override
-	public String toString() {
-		String aux = "Classe: " + classe + ", " + 
-				"Defesa: " + defesa + ", " + 
-				"Ataque: " + ataque + ", " + 
-				"Energia: " + energia + ", " + 
-				"Terreno: " + terreno;
-		return aux;
-	}
-
 }

@@ -1,6 +1,7 @@
 package criature;
 
 public abstract class Criature {
+	
 	protected String classe;
 	protected int defesa;
 	protected int ataque;
@@ -37,6 +38,16 @@ public abstract class Criature {
 
 	public String getTerreno() {
 		return terreno;
+	}
+	
+	@Override
+	public String toString() {
+		String aux = "Criatura = [Classe: " + classe + ", " + 
+				"Defesa: " + defesa + ", " + 
+				"Ataque: " + ataque + ", " + 
+				"Energia: " + energia + ", " + 
+				"Terreno: " + terreno + "]";
+		return aux;
 	}
 	
 }
